@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #ffffff;
+      --foreground: #ededed;
+    }
+  }
+
+  body {
+    @apply bg-background text-tuscher-text font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Layout Components */
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .container-padding {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  /* Button Components */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded transition-colors duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-tuscher-blue text-white hover:bg-tuscher-blue-light;
+  }
+
+  /* Navigation Components */
+  .nav-link {
+    @apply text-tuscher-blue px-3 py-2 rounded transition-colors duration-300
+    hover:bg-tuscher-blue hover:text-white;
+  }
+
+  .nav-link.active {
+    @apply font-bold;
+  }
+
+  /* Section Components */
+  .section {
+    @apply py-16;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-tuscher-blue text-center mb-8
+    after:content-[''] after:block after:w-[155px] after:h-[1px] 
+    after:bg-tuscher-blue-light after:mx-auto after:mt-2;
+  }
+
+  /* Card Components */
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-lg hover:scale-105;
+  }
+
+  /* Hero Components */
+  .hero-section {
+    @apply relative h-[50vh] mt-24;
+  }
+
+  .hero-content {
+    @apply absolute inset-0 flex items-center;
+  }
+
+  .hero-text {
+    @apply max-w-2xl text-white space-y-6;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
