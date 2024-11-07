@@ -1,5 +1,5 @@
 // src/components/home/ProductCategories.tsx
-
+//hh
 import Image from 'next/image';
 import Link from 'next/link';
 import { fetchAPI, getStrapiMediaUrl } from '@/utils/api';
